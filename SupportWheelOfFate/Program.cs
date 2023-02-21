@@ -19,6 +19,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IRotaRepository,RotaRepository>();
 builder.Services.AddScoped<IEngineerRepository,EngineerRepository>();
 
+builder.Services.AddCors(o => o.AddPolicy("ReactPolicy", builder =>
+{
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+}));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -33,6 +40,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("ReactPolicy");
 
 AppDbInitializer.Seed(app);
 
