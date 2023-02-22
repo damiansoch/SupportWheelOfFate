@@ -17,26 +17,29 @@ namespace SupportWheelOfFate.Repositories
         public async Task<IEnumerable<Shift>> CreateRota()
         {
             var allEngineers = await context.Engineers.ToListAsync();
+            //extra list just so i can remove the engineers selected before
             var allEngineersMorning = allEngineers.ToList();
-            var allEngineersAfternoon = allEngineers.ToList();
+            
 
 
 
 
             //creating random list form morning shifts
-            List<Engineer> randomlySelectedEngineersMorning = new List<Engineer>();
+            List<Engineer> randomlySelectedEngineersMorning = new();
 
             while (allEngineersMorning.Count > 0)
             {
-                Random rnd = new Random();
+                Random rnd = new();
                 var engineer = allEngineersMorning[rnd.Next(0, allEngineersMorning.Count - 1)];
 
+                //adding the engineer to the morning shift list
                 randomlySelectedEngineersMorning.Add(engineer);
+                //deleting selected engineer from the list
                 allEngineersMorning.Remove(engineer);
             }
-            //creating random list for afternoon shifts
-
-            List<Engineer> randomlySelectedEngineersAfternoon = new List<Engineer>();
+            
+            //creating afternoon shifts
+            List<Engineer> randomlySelectedEngineersAfternoon = new();
 
 
             var counter = 0;
@@ -44,6 +47,7 @@ namespace SupportWheelOfFate.Repositories
             while (counter < randomlySelectedEngineersMorning.Count)
             {
                 
+                //not the same day and not next day
                 var index = counter + 2;
                 if (index == randomlySelectedEngineersMorning.Count)
                 {
@@ -54,6 +58,7 @@ namespace SupportWheelOfFate.Repositories
                     index = 1;
                 }
                 var engineer = randomlySelectedEngineersMorning[index];
+                //adding the engineer to the afternoon shift list
                 randomlySelectedEngineersAfternoon.Add(engineer);
 
                 counter++;
@@ -61,7 +66,8 @@ namespace SupportWheelOfFate.Repositories
             }
 
 
-            List<Shift> allShiftsCovered = new List<Shift>();
+            //creating the shifts
+            List<Shift> allShiftsCovered = new();
 
             for (int i = 0; i < randomlySelectedEngineersMorning.Count; i++)
             {
@@ -90,7 +96,8 @@ namespace SupportWheelOfFate.Repositories
         }
 
 
-
+        ///I tried to do the afternoon shift fully random as well, but it always ended up with some errors at the end... 
+        ///the reason is that the last picks for the afternoon shifts the same day or consecutive day
         //--------------------------------------------------------------------------------------------
 
 
