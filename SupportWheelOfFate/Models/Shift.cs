@@ -10,7 +10,7 @@ namespace SupportWheelOfFate.Models
 
         
         
-        public EngineerModel Engineer { get; set; } = default!;
+        public Engineer Engineer { get; set; } = default!;
        
 
         
