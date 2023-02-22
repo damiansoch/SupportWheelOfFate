@@ -18,7 +18,7 @@ namespace SupportWheelOfFate.Controllers
         [HttpGet]
         public async Task<IActionResult> CreateRota()
         {
-            var rota = await rotaRepository.CreateRotaFullRandom();
+            var rota = await rotaRepository.CreateRota();
 
             return Ok(rota);
         }
