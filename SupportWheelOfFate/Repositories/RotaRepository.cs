@@ -80,7 +80,7 @@ namespace SupportWheelOfFate.Repositories
 
 
             //creating random list form morning shifts
-            List<EngineerModel> randomlySelectedEngineersMorning = new List<EngineerModel>();
+            List<Engineer> randomlySelectedEngineersMorning = new List<Engineer>();
 
             while (allEngineersMorning.Count > 0)
             {
@@ -92,7 +92,7 @@ namespace SupportWheelOfFate.Repositories
             }
             //creating random list for afternoon shifts
 
-            List<EngineerModel> randomlySelectedEngineersAfternoon = new List<EngineerModel>();
+            List<Engineer> randomlySelectedEngineersAfternoon = new List<Engineer>();
 
 
 
