@@ -17,75 +17,75 @@ namespace SupportWheelOfFate.Data
                         new Engineer()
                         {
                             Id = new Guid(),
-                            FirstName = "John",
-                            LastName = "Travolta",
+                            FirstName = "Engineer",
+                            LastName = "One",
                         },
                          new Engineer()
                         {
                             Id = new Guid(),
-                            FirstName = "Alan",
-                            LastName = "Parson",
+                            FirstName = "Engineer",
+                            LastName = "Two",
                         },
                          new Engineer()
                         {
                             Id = new Guid(),
-                            FirstName = "Eddie",
-                            LastName = "Murphy",
+                            FirstName = "Engineer",
+                            LastName = "Three",
                            
                             
                         },
                          new Engineer()
                         {
                             Id = new Guid(),
-                            FirstName = "Elton",
-                            LastName = "John",
+                            FirstName = "Engineer",
+                            LastName = "Four",
                            
                             
                         },
                          new Engineer()
                         {
                             Id = new Guid(),
-                            FirstName = "Freedie",
-                            LastName = "Merkury",
+                            FirstName = "Engineer",
+                            LastName = "Five",
                             
                             
                         },
                          new Engineer()
                         {
                             Id = new Guid(),
-                            FirstName = "Whitney",
-                            LastName = "Houston",
+                            FirstName = "Engineer",
+                            LastName = "Six",
                            
                             
                         },
                          new Engineer()
                         {
                             Id = new Guid(),
-                            FirstName = "Ariana",
-                            LastName = "Grande",
+                            FirstName = "Engineer",
+                            LastName = "Seven",
                            
                             
                         },
                          new Engineer()
                         {
                             Id = new Guid(),
-                            FirstName = "Mariah",
-                            LastName = "Carrey",
+                            FirstName = "Engineer",
+                            LastName = "Eight",
                            
                         },
                          new Engineer()
                         {
                             Id = new Guid(),
-                            FirstName = "Amy",
-                            LastName = "Whinehouse",
+                            FirstName = "Engineer",
+                            LastName = "Nine",
                             
                             
                         },
                          new Engineer()
                         {
                             Id = new Guid(),
-                            FirstName = "Stevie",
-                            LastName = "Wonder",
+                            FirstName = "Engineer",
+                            LastName = "Ten",
                             
                         }
 
